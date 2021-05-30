@@ -1,0 +1,133 @@
+.popup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background-image: linear-gradient(rgba(black, 0.5), rgba(black, .5));
+  //background-color: black;
+
+
+  &__title{
+    font-size: 34px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+
+    &--income{
+      color: #00C56A;
+    }
+    &--expense{
+      color: #E12C2C;
+    }
+  }
+}
+
+.popup__canvas{
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.popup__close{
+  background-color: transparent;
+  border: none;
+  width: max-content;
+  height: max-content;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: all .2s;
+
+  &:hover{
+    font-size: 24px;
+  }
+}
+
+
+.popup__form{
+  //background-color: orangered;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+
+  input[type=text], select{
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  &--description{
+    width: 100%;
+    margin-bottom: 10px;
+
+
+  }
+  &--value{
+    width: 69%;
+
+  }
+  &--valuta{
+    width: 30%;
+  }
+
+}
+.popup__form--value-box{
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.popup__form--submit{
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    transform: translateY(-2px);
+  }
+}
+
+.popup__form--submit__income{
+  border: 1px #00C56A solid ;
+  color: white;
+  background-color: #00C56A;
+}
+
+.popup__form--submit__expense{
+  border: 1px #E12C2C solid ;
+  color: white;
+  background-color: #E12C2C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--    Header      -->
+    <header class="header">
+        <div class="header__box">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--dashboard"><a href="#" class="nav__link nav__link--dashboard">Dashboard</a></li>
+                    <li class="nav__item nav__item--income"><a href="#" class="nav__link nav__link--income">Income</a></li>
+                    <li class="nav__item logo__title logo">Dashboard</li>
+                    <li class="nav__item nav__item--expense"><a href="#" class="nav__link nav__link--expense">Expense</a></li>
+                    <li class="nav__item nav__item--item"><a href="#" class="nav__link nav__link--item">item</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--    &lt;!&ndash;    Structuur paneel       &ndash;&gt;-->
+    <section class="paneel">
+        <div class="paneel__box">
+<!--            Paneel links-->
+            <div class="paneel__links paneel__side">
+    <!--            Dashboard           -->
+<!--                <div class="date__box">-->
+<!--                    <div class="date__arrow date__arrow--left">&larr;</div>-->
+<!--                    <div class="date__date">March 2021</div>-->
+<!--                    <div class="date__arrow date__arrow--right">&rarr;</div>-->
+<!--                </div>-->
+
+
+<!--                BEGIN DASHBOARD LEFT                             -->
+
+                <div class="dashboard hide">
+                    <div class="date__box">
+                        <div class="date__date">March 2021</div>
+                    </div>
+                    <div class="percentage percentage__red">
+                        <p class="percentage__value">72%</p>
+                    </div>
+
+                    <div class="display__budget display__box">
+                        <h3 class="display__title">Budget</h3>
+                        <div class="display__value">
+                            <span class="display__value--number display__budget--value">0.00</span>
+                            <span class="display__value--valuta">euro</span>
+                        </div>
+                    </div>
+                    <div class="display__income display__box">
+                        <h3 class="display__title">Income total</h3>
+                        <div class="display__value">
+                            <span class="display__value--number display__income-total--value">0.00</span>
+                            <span class="display__value--valuta">euro</span>
+                        </div>
+                    </div>
+                    <div class="display__expense display__box">
+                        <h3 class="display__title">Expense total</h3>
+                        <div class="display__value">
+                            <span class="display__value--number display__expense-total--value" >0.00</span>
+                            <span class="display__value--valuta">euro</span>
+                        </div>
+                    </div>
+                </div>
+
+
+<!--                END DASHBOARD LEFT                    -->
+<!--                START INCOME  LEFT                      -->
+                <div class="income">
+                    <div class="date__box">
+                        <div class="date__date">March 2021</div>
+                    </div>
+                    <h2 class="title__income title">Income total</h2>
+                    <div class="total__income total">
+                        <span class="total__income--value display__income-total--value">0.00</span>
+                        <span class="total__income--valuta"> euro</span>
+                    </div>
+                    <button class="add add__income">
+                        +
+                    </button>
+                </div>
+
+
+<!--                END INCOME LEFT                 -->
+
+
+<!--                START EXPENSE LEFT          -->
+                <div class="expense hide">
+                    <div class="date__box">
+                        <div class="date__date">March 2021</div>
+                    </div>
+                    <h2 class="title__expense title">Expense total</h2>
+                    <div class="total__expense total">
+                        <span class="total_expense--value display__expense-total--value">0.00</span>
+                        <span class="total__expense--valuta"> euro</span>
+                    </div>
+                    <button class="add add__expense">
+                        +
+                    </button>
+                </div>
+
+<!--                END EXPENSE LEFT-->
+
+            </div>
+
+
+
+
+
+
+<!--            Paneel rechts-->
+            <div class="paneel__rechts paneel__side">
+    <!--            DASHBOARD START RIGHT         -->
+                <div class="dashboard hide">
+                    <div class="dashboard__listBox">
+                        <ul class="list global__list">
+<!--                            <li class="list__item list__item&#45;&#45;green">-->
+<!--                                <div class="list__item&#45;&#45;top">-->
+<!--                                    <div class="list__item&#45;&#45;top__price">-->
+<!--                                    <span class="list__item&#45;&#45;top__price&#45;&#45;number">-->
+<!--                                        1649.32-->
+<!--                                    </span>-->
+<!--                                        <span class="list__item&#45;&#45;top__price&#45;&#45;valuta">-->
+<!--                                        euro-->
+<!--                                    </span>-->
+<!--                                    </div>-->
+<!--                                    <div class="list__item&#45;&#45;top__date">-->
+<!--                                        13/04/2021-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="list__item&#45;&#45;bottom">-->
+<!--                                    <div class="list__item&#45;&#45;bottom__description">-->
+<!--                                        Loon versa lega-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+<!--            DASHBOARD END RIGHT          -->
+
+
+<!--                INCOME START RIGHT              -->
+                <div class="income">
+                    <div class="dashboard__listBox">
+                        <ul class="list income__list">
+
+                        </ul>
+                    </div>
+                </div>
+
+<!--                EXPENSE START RIGHT             -->
+                <div class="expense hide">
+                    <div class="dashboard__listBox">
+                        <ul class="list expense__list">
+
+                        </ul>
+                    </div>
+                </div>
+
+
+<!--                EXPENSE END RIGHT               -->
+
+            </div>
+        </div>
+    </section>
+    <div class="popup hide">
+        <div class="popup__canvas">
+            <button class="popup__close">X</button>
+            <h3 class="popup__title">Add new transaction</h3>
+            <form class="popup__form">
+                <input type="text" class="popup__form--description" placeholder="Description">
+                <br>
+                <div class="popup__form--value-box">
+                    <input type="text" placeholder="Value" class="popup__form--value ">
+                    <select name="valuta" class="popup__form--valuta ">
+                        <option value="Euro">Euro</option>
+                        <option value="Dollar">Dollar</option>
+                    </select>
+                </div>
+                <button class="popup__form--submit">Add</button>
+            </form>
+        </div>
+    </div>
+<!--    <div class="popup popup__income hide">-->
+<!--        <div class="popup__canvas">-->
+<!--            <button class="popup__close popup__close&#45;&#45;income">X</button>-->
+<!--            <h3 class="popup__title popup__title&#45;&#45;income">Add new income</h3>-->
+<!--            <form class="popup__form">-->
+<!--                <input type="text" class="popup__form&#45;&#45;description popup__form&#45;&#45;description__income" placeholder="Description">-->
+<!--                <br>-->
+<!--                <div class="popup__form&#45;&#45;value-box">-->
+<!--                    <input type="text" placeholder="Value" class="popup__form&#45;&#45;value popup__form&#45;&#45;value__income">-->
+<!--                    <select name="valuta" class="popup__form&#45;&#45;valuta popup__form&#45;&#45;valuta__income">-->
+<!--                        <option value="Euro">Euro</option>-->
+<!--                        <option value="Dollar">Dollar</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <button class="popup__form&#45;&#45;submit popup__form&#45;&#45;submit__income">Add</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="popup popup__expense hide">-->
+<!--        <div class="popup__canvas">-->
+<!--            <button class="popup__close popup__close&#45;&#45;expense">X</button>-->
+<!--            <h3 class="popup__title popup__title&#45;&#45;expense">Add new expense</h3>-->
+<!--            <form class="popup__form">-->
+<!--                <input type="text" class="popup__form&#45;&#45;description popup__form&#45;&#45;description__expense" placeholder="Description">-->
+<!--                <br>-->
+<!--                <div class="popup__form&#45;&#45;value-box">-->
+<!--                    <input type="text" placeholder="Value" class="popup__form&#45;&#45;value popup__form&#45;&#45;value__expense">-->
+<!--                    <select name="valuta" class="popup__form&#45;&#45;valuta popup__form&#45;&#45;valuta__expense">-->
+<!--                        <option value="Euro">Euro</option>-->
+<!--                        <option value="Dollar">Dollar</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <button class="popup__form&#45;&#45;submit popup__form&#45;&#45;submit__expense">Add</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.expense{
+
+}
+
+.title__expense{
+  color: #E12C2C;
+}
+.add__expense{
+  background-color: #E12C2C;
+  &:hover, &:active{
+    background-color: #E12C2C;
+  }
+}

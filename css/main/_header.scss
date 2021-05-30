@@ -1,0 +1,103 @@
+.header{
+  width: 100%;
+  height: 100px;
+  &__box{
+    width: inherit;
+    height: inherit;
+    background-color: #2D3439;
+
+  }
+}
+
+.nav{
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+
+  &__list{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  &__item{
+    width: 175px;
+    height: 45px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+
+
+    }
+  &__link {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+
+    &:visited, &:link {
+      color: white;
+      font-weight: 600;
+
+    }
+
+    &:hover, &:active {
+
+    }
+
+    &--dashboard {
+      background-color: #2EC0FF;
+
+      &:hover, &:active{
+        background-color: #6bc0f3;
+      }
+    }
+
+    &--income {
+      background-color: #00C56A;
+
+      &:hover, &:active{
+        background-color: #40cb7e;
+      }
+    }
+
+    &--expense {
+      background-color: #E12C2C;
+
+      &:hover, &:active{
+        background-color: #fd5050;
+      }
+    }
+    &--item{
+      background-color: #5f8092;
+    }
+  }
+}
+
+.logo{
+  color: white;
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

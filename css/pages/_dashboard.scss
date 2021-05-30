@@ -1,0 +1,62 @@
+
+
+////////////  LINKS /////////////////
+// Percentage circle
+.percentage{
+  font-size: 25px;
+  //margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: white;
+}
+.percentage__green{
+  color: green;
+  border: 4px green solid;
+}
+.percentage__orange{
+  color: orange;
+  border: 4px orange solid;
+}
+.percentage__red{
+  color: red;
+  border: 4px red solid;
+}
+
+
+//            status boxes
+// box general
+.display__box{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  height: 100px;
+  font-size: 20px;
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+
+// budget box
+.display__budget{
+  border: 2px solid #2EC0FF;
+}
+.display__income{
+  border: 2px solid #00C56A;
+}
+.display__expense{
+  border: 2px solid #E12C2C;
+}
+
+////////////  RECHTS  /////////////////
+
+
+
+
+

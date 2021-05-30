@@ -1,0 +1,13 @@
+.income{
+
+}
+
+.title__income{
+  color: #00C56A;
+}
+.add__income{
+  background-color: #00C56A;
+  &:hover, &:active{
+    background-color: #40cb7e;
+  }
+}
