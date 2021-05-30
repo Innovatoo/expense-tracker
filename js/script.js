@@ -76,8 +76,9 @@ class App{
         this._getTransID();
         this._openDashboard();
         this._loadGlobalList();
-        this._calcTotalIncome();
-        this._calcTotalExpense();
+        // this._calcTotalIncome();
+        // this._calcTotalExpense();
+        this._calcTotalSides();
         this._calcTotalBudget();
         this._calcPercentage(this.#totalIncome, this.#totalExpense);
         // _showCurrentTime();
@@ -227,19 +228,45 @@ class App{
     _loadExpenseList(){
 
     }
-    _calcTotalIncome(){
+
+    _calcTotalSides(){
         let totalIncome = 0;
+        let totalExpense = 0;
+
         this.#incomeList.forEach(income => {
             totalIncome += income.value;
         });
-        console.log(`total income = ${totalIncome}`);
-        totalIncomeValue.value = this.#totalIncome;
+
+        this.#totalIncome = totalIncome;
+        totalIncomeValue.innerHTML = totalIncome;
+
+        this.#expenseList.forEach(expense => {
+            totalExpense += expense.value;
+        });
+
+        this.#totalExpense = totalExpense;
+        totalExpenseValue.innerHTML = totalExpense;
     }
-    _calcTotalExpense(){
 
 
 
-    }
+
+    // _calcTotalIncome(){
+    //     let totalIncome = 0;
+    //
+    //     console.log(`total income = ${totalIncome}`);
+    //     totalIncomeValue.innerHTML = totalIncome;
+    // }
+    // _calcTotalExpense(){
+    //     let totalExpense = 0;
+    //     this.#incomeList.forEach(expense => {
+    //         totalExpense += income.value;
+    //     });
+    //     console.log(`total expense = ${totalExpense}`);
+    //     totalExpenseValue.innerHTML = totalExpense;
+    // }
+
+
     _calcPercentage(totalIncome, totalExpense){
 
     }
@@ -305,12 +332,8 @@ class App{
             console.log(this.#incomeList);
 
             // generate HTML
-            this._loadIncomeList();
 
-
-
-            // console.log('test');
-
+            this._calcTotalIncome();
 
         }
 
@@ -332,17 +355,16 @@ class App{
             // object toevoegen in expense lijst
             this.#expenseList.push(transaction);
             this.#globalList.push(transaction);
+            this._calcTotalExpense();
         }
 
         this._renderTransaction(transaction);
+
         // this._hidePopup(activePopup);
 
         // reset form fields
         popupDescription.value = '';
         popupValue.value = '';
-
-
-
     }
 
     _renderTransaction(transaction){
