@@ -355,6 +355,7 @@ class App{
 
 
 
+
         let html = `
         <li class="list__item list__item--${ activePopup === 'income' ? income : expense}">
                                 <div class="list__item--top">
