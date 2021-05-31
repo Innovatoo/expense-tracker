@@ -211,6 +211,16 @@ time, mark, audio, video {
   position: relative;
   align-items: center;
   justify-content: space-evenly;
+  margin: 20px;
+}
+.popup__canvas--warning {
+  height: max-content !important;
+  width: max-content !important;
+  padding: 30px 60px;
+  justify-content: center !important;
+  text-align: center;
+  color: red;
+  border-radius: 10px;
 }
 
 .popup__close {
@@ -279,6 +289,10 @@ time, mark, audio, video {
   border: 1px #E12C2C solid;
   color: white;
   background-color: #E12C2C;
+}
+
+.warning__message {
+  font-size: 20px;
 }
 
 .date__box {

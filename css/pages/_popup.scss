@@ -25,6 +25,8 @@
       color: #E12C2C;
     }
   }
+
+
 }
 
 .popup__canvas{
@@ -36,6 +38,18 @@
   position: relative;
   align-items: center;
   justify-content: space-evenly;
+  margin: 20px;
+
+  &--warning{
+    height: max-content !important;
+    width: max-content !important;
+    padding: 30px 60px;
+    justify-content: center !important;
+    text-align: center;
+    //border: 5px solid red;
+    color: red;
+    border-radius: 10px;
+  }
 }
 
 .popup__close{
@@ -115,7 +129,11 @@
 }
 
 
-
+.warning{
+  &__message{
+    font-size: 20px;
+  }
+}
 
 
 

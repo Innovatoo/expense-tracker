@@ -15,8 +15,8 @@ const percentage = document.querySelector('.percentage__value');
 const pageName = document.querySelector('.logo__title');
 
 const totalBudgetValue = document.querySelector('.display__budget--value');
-const totalIncomeValue = document.querySelector('.display__income-total--value');
-const totalExpenseValue = document.querySelector('.display__expense-total--value');
+const totalIncomeValue = document.querySelectorAll('.display__income-total--value');
+const totalExpenseValue = document.querySelectorAll('.display__expense-total--value');
 
 
 const incomeList = document.querySelector('.income__list');
@@ -32,7 +32,8 @@ const incomePopup = document.querySelector('.popup__income');
 const expensePopup = document.querySelector('.popup__expense');
 const popup = document.querySelector('.popup');
 
-const popupClose = document.querySelector('.popup__close');
+const popupClose = document.querySelectorAll('.popup__close');
+
 const popupTitle = document.querySelector('.popup__title');
 const popupDescription = document.querySelector('.popup__form--description');
 const popupValue = document.querySelector('.popup__form--value');
@@ -62,9 +63,9 @@ class App{
     #globalList = [];
     #incomeList = [];
     #expenseList =[];
-    #totalExpense;
-    #totalIncome;
-    #totalBudget;
+    #totalExpense = 0;
+    #totalIncome = 0;
+    #totalBudget = 0;
     #pencentage;
     #nextTransID;
     #date;
@@ -133,13 +134,7 @@ class App{
         // update the global balance
 
 
-        // update the the side that was used to upload
-        if (activePopup === 'income'){
-            this._calcTotalIncome();
-        }
-        if (activePopup === 'expense'){
-            this._calcTotalExpense();
-        }
+        this._calcTotalSides();
 
     }
 
@@ -199,9 +194,7 @@ class App{
             popupSubmit.classList.add('popup__form--submit__expense');
         }
     }
-    _emptyPopupFields(){
 
-    }
     _closePopup(e){
         e.preventDefault();
         // console.log(e.target);
@@ -234,37 +227,32 @@ class App{
         let totalExpense = 0;
 
         this.#incomeList.forEach(income => {
-            totalIncome += income.value;
+            totalIncome += parseInt(income.value);
         });
 
         this.#totalIncome = totalIncome;
-        totalIncomeValue.innerHTML = totalIncome;
+        totalIncomeValue.forEach(income =>{
+            income.innerHTML = parseInt(totalIncome);
+        })
 
         this.#expenseList.forEach(expense => {
-            totalExpense += expense.value;
+            totalExpense += parseInt(expense.value);
         });
 
         this.#totalExpense = totalExpense;
-        totalExpenseValue.innerHTML = totalExpense;
+        totalExpenseValue.forEach(expense =>{
+            expense.innerHTML = parseInt(totalExpense);
+        })
+        this._calcTotalBudget();
     }
 
 
-
-
-    // _calcTotalIncome(){
-    //     let totalIncome = 0;
-    //
-    //     console.log(`total income = ${totalIncome}`);
-    //     totalIncomeValue.innerHTML = totalIncome;
-    // }
-    // _calcTotalExpense(){
-    //     let totalExpense = 0;
-    //     this.#incomeList.forEach(expense => {
-    //         totalExpense += income.value;
-    //     });
-    //     console.log(`total expense = ${totalExpense}`);
-    //     totalExpenseValue.innerHTML = totalExpense;
-    // }
+    _calcTotalBudget(){
+        let totalBudget = this.#totalIncome - this.#totalExpense;
+        console.log(totalBudget)
+        totalBudgetValue.innerHTML = parseInt(totalBudget);
+        this.#totalBudget = parseInt(totalBudget);
+    }
 
 
     _calcPercentage(totalIncome, totalExpense){
@@ -331,10 +319,6 @@ class App{
 
             console.log(this.#incomeList);
 
-            // generate HTML
-
-            this._calcTotalIncome();
-
         }
 
         if(activePopup === 'expense'){
@@ -355,9 +339,9 @@ class App{
             // object toevoegen in expense lijst
             this.#expenseList.push(transaction);
             this.#globalList.push(transaction);
-            this._calcTotalExpense();
         }
 
+        this._calcTotalSides();
         this._renderTransaction(transaction);
 
         // this._hidePopup(activePopup);
@@ -418,9 +402,7 @@ class App{
             expensePopup.classList.toggle('hide');
         }
     }
-    _calcTotalBudget(){
 
-    }
 
 
 
