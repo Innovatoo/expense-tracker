@@ -174,6 +174,7 @@ class App{
         });
     }
 
+
     _openPopup(e){
         e.preventDefault();
         popup.classList.remove('hide');
